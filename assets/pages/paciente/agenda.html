@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda - Care Plus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <a href="home-paciente.html" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i></a>
+    <span class="flex-grow-1 text-center">Agenda</span>
+    <span style="width: 24px;"></span>
+  </header>
+  <div class="main-container">
+    <div id="careplus-calendar" class="mb-4"></div>
+    <p id="msg-data-selecionada" class="text-white-50 small mb-3">Selecione uma data no calendário</p>
+    <div id="eventos-do-dia" class="mb-3" style="display: none;">
+      <h2 class="section-title"><i class="bi bi-calendar-event"></i> Eventos do dia</h2>
+      <div id="lista-eventos-dia"></div>
+    </div>
+    <h2 class="section-title"><i class="bi bi-calendar-check"></i> Minhas consultas</h2>
+    <div class="consult-card">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+        <div>
+          <div class="consult-title">Ortopedista - Dr. Claudio</div>
+          <p class="consult-meta mb-0">Hospital HSIA</p>
+          <p class="consult-meta mb-0">Quarta-feira, 22 de Outubro, 9:00</p>
+        </div>
+        <a href="detalhes-consulta.html" class="btn btn-careplus btn-sm">Detalhes</a>
+      </div>
+    </div>
+    <div class="consult-card">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+        <div>
+          <div class="consult-title">Clínico Geral - Dr. Roger</div>
+          <p class="consult-meta mb-0">Hospital HSA</p>
+          <p class="consult-meta mb-0">Sexta-feira, 31 de Outubro, 9:00</p>
+        </div>
+        <a href="detalhes-consulta.html" class="btn btn-careplus btn-sm">Detalhes</a>
+      </div>
+    </div>
+    <a href="marcar-consulta.html" class="btn btn-success-careplus w-100 py-3 mt-2">Marcar consulta</a>
+  </div>
+  <nav class="nav-bottom">
+    <a href="home-paciente.html" class="active"><i class="bi bi-house-door-fill nav-icon"></i></a>
+    <a href="perfil-paciente.html"><i class="bi bi-person nav-icon"></i></a>
+    <a href="menu-paciente.html"><i class="bi bi-list nav-icon"></i></a>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/calendar.js"></script>
+  <script src="../../js/app.js"></script>
+  <script>
+    (function () {
+      var consultasExemplo = [
+        { dia: 22, mes: 9, ano: 2025, titulo: 'Ortopedista - Dr. Claudio', local: 'Hospital HSIA', horario: '9:00' },
+        { dia: 31, mes: 9, ano: 2025, titulo: 'Clínico Geral - Dr. Roger', local: 'Hospital HSA', horario: '9:00' }
+      ];
+      function formatarData(d) {
+        var opts = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        return d.toLocaleDateString('pt-BR', opts);
+      }
+      CarePlusCalendar.init('careplus-calendar', {
+        initialYear: 2025,
+        initialMonth: 9,
+        initialDate: '2025-10-22',
+        onSelect: function (date) {
+          var msg = document.getElementById('msg-data-selecionada');
+          var bloc = document.getElementById('eventos-do-dia');
+          var list = document.getElementById('lista-eventos-dia');
+          var dia = date.getDate(), mes = date.getMonth(), ano = date.getFullYear();
+          msg.textContent = 'Eventos para ' + formatarData(date);
+          var doDia = consultasExemplo.filter(function (c) { return c.dia === dia && c.mes === mes && c.ano === ano; });
+          if (doDia.length) {
+            bloc.style.display = 'block';
+            list.innerHTML = doDia.map(function (c) {
+              return '<div class="consult-card mb-2"><div class="consult-title">' + c.titulo + '</div><p class="consult-meta mb-0">' + c.local + ' - ' + c.horario + '</p></div>';
+            }).join('');
+          } else {
+            bloc.style.display = 'none';
+            msg.textContent = 'Nenhum evento para ' + formatarData(date);
+          }
+        }
+      });
+      document.getElementById('msg-data-selecionada').textContent = 'Eventos para ' + formatarData(new Date(2025, 9, 22));
+    })();
+  </script>
+</body>
+</html>
