@@ -1,0 +1,677 @@
+/* ============================================================
+   Care Plus - Estilos comuns (layout, componentes, tema)
+   Usado em todas as páginas do app.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --careplus-teal: #004C5F;
+  --careplus-teal-light: #006680;
+  --careplus-teal-dark: #003540;
+  --careplus-green: #00a878;
+  --careplus-green-hover: #008f66;
+  --careplus-red: #e63946;
+  --careplus-red-hover: #c1121f;
+  --careplus-orange: #f4a261;
+  --careplus-bg: #002a33;
+  --careplus-bg-gradient: linear-gradient(165deg, #003d4a 0%, #002a33 50%, #002028 100%);
+  --careplus-card: #ffffff;
+  --careplus-card-hover: #f8f9fa;
+  --careplus-text: #212529;
+  --careplus-text-muted: #6c757d;
+  --careplus-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --careplus-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --careplus-radius: 16px;
+  --careplus-radius-sm: 12px;
+  --nav-height: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--careplus-bg-gradient);
+  background-attachment: fixed;
+  color: #fff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  padding-bottom: var(--nav-height);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----- Header ----- */
+.app-header {
+  background: linear-gradient(180deg, var(--careplus-teal) 0%, var(--careplus-teal-dark) 100%);
+  color: #fff;
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  min-height: 56px;
+}
+
+.app-header a {
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.app-header a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.app-header .logo-text {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.app-header .logo-sub {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+/* ----- Botões ----- */
+.btn-careplus {
+  background: var(--careplus-teal);
+  border: none;
+  color: #fff;
+  border-radius: var(--careplus-radius-sm);
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-careplus:hover {
+  background: var(--careplus-teal-light);
+  color: #fff;
+}
+
+.btn-careplus:active {
+  transform: scale(0.98);
+}
+
+.btn-success-careplus {
+  background: var(--careplus-green);
+  border: none;
+  color: #fff;
+  border-radius: var(--careplus-radius-sm);
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-success-careplus:hover {
+  background: var(--careplus-green-hover);
+  color: #fff;
+}
+
+.btn-success-careplus:active {
+  transform: scale(0.98);
+}
+
+.btn-danger-careplus {
+  background: var(--careplus-red);
+  border: none;
+  color: #fff;
+  border-radius: var(--careplus-radius-sm);
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-danger-careplus:hover {
+  background: var(--careplus-red-hover);
+  color: #fff;
+}
+
+.btn-danger-careplus:active {
+  transform: scale(0.98);
+}
+
+/* ----- Cards ----- */
+.card-careplus {
+  background: var(--careplus-card);
+  color: var(--careplus-text);
+  border-radius: var(--careplus-radius);
+  border: none;
+  box-shadow: var(--careplus-shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-careplus:hover {
+  box-shadow: var(--careplus-shadow-hover);
+}
+
+a.card-careplus:hover {
+  transform: translateY(-2px);
+}
+
+/* ----- Títulos de tela e seção ----- */
+.screen-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.screen-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.25rem;
+}
+
+.section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title i {
+  opacity: 0.9;
+}
+
+/* ----- App card (lista com ícone + seta) ----- */
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: var(--careplus-text);
+  background: var(--careplus-card);
+  border: none;
+  border-radius: var(--careplus-radius);
+  box-shadow: var(--careplus-shadow);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.app-card:hover {
+  color: var(--careplus-text);
+  box-shadow: var(--careplus-shadow-hover);
+  transform: translateX(4px);
+}
+
+.app-card .app-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 76, 95, 0.08);
+  color: var(--careplus-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.app-card .app-card-label {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.app-card .app-card-arrow {
+  color: var(--careplus-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ----- Feature card (grid home: ícone em cima + texto) ----- */
+.feature-card {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--careplus-text);
+  border: none;
+  box-shadow: var(--careplus-shadow);
+  transition: box-shadow 0.2s, transform 0.15s;
+  display: block;
+}
+
+.feature-card:hover {
+  color: var(--careplus-text);
+  box-shadow: var(--careplus-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.feature-card .feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(0, 76, 95, 0.1);
+  color: var(--careplus-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 0.75rem;
+}
+
+.feature-card .feature-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--careplus-text);
+}
+
+/* ----- Consult card (item de consulta na agenda/histórico) ----- */
+.consult-card {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: var(--careplus-shadow);
+  border-left: 4px solid var(--careplus-teal);
+  transition: box-shadow 0.2s;
+}
+
+.consult-card:hover {
+  box-shadow: var(--careplus-shadow-hover);
+}
+
+.consult-card .consult-title {
+  font-weight: 600;
+  color: var(--careplus-text);
+  margin-bottom: 0.25rem;
+}
+
+.consult-card .consult-meta {
+  font-size: 0.85rem;
+  color: var(--careplus-text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.consult-card .consult-points {
+  font-weight: 600;
+  color: var(--careplus-orange);
+  font-size: 0.9rem;
+}
+
+/* ----- Form card (formulário dentro de card em telas escuras) ----- */
+.form-card {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1.5rem;
+  box-shadow: var(--careplus-shadow);
+}
+
+.form-card .form-label {
+  color: var(--careplus-text);
+  font-weight: 500;
+}
+
+.form-card .form-control,
+.form-card .form-select {
+  border-radius: var(--careplus-radius-sm);
+  border: 1px solid #e5e7eb;
+}
+
+.form-card .form-control:focus,
+.form-card .form-select:focus {
+  border-color: var(--careplus-teal);
+  box-shadow: 0 0 0 3px rgba(0, 76, 95, 0.12);
+}
+
+/* ----- Navegação inferior ----- */
+.nav-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, var(--careplus-teal-dark) 0%, var(--careplus-teal) 100%);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25);
+  min-height: var(--nav-height);
+}
+
+.nav-bottom a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--careplus-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-bottom a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-bottom a.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-bottom .nav-icon {
+  font-size: 1.35rem;
+}
+
+/* ----- Logo (uso geral) ----- */
+.logo-careplus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo-careplus .bi-heart-fill {
+  font-size: 2.5rem;
+  color: var(--careplus-teal);
+}
+
+.logo-careplus .logo-title {
+  color: var(--careplus-teal);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.logo-careplus .logo-subtitle {
+  font-size: 0.8rem;
+  color: var(--careplus-teal);
+  opacity: 0.9;
+}
+
+/* ----- Formulários (telas com .bg-careplus) ----- */
+.bg-careplus .form-control,
+.bg-careplus .form-select {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--careplus-radius-sm);
+  padding: 0.65rem 1rem;
+}
+
+.bg-careplus .form-control:focus,
+.bg-careplus .form-select:focus {
+  border-color: var(--careplus-teal);
+  box-shadow: 0 0 0 3px rgba(0, 76, 95, 0.15);
+}
+
+.bg-careplus .form-label {
+  color: #fff;
+}
+
+/* ----- Badge notificação ----- */
+.badge-notification {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--careplus-red);
+  color: #fff;
+  font-size: 0.65rem;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- Barra de pontos (uso geral) ----- */
+.points-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.points-bar .fill {
+  height: 100%;
+  background: var(--careplus-orange);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* ----- Feedback de sucesso ----- */
+.success-check {
+  width: 88px;
+  height: 88px;
+  background: var(--careplus-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 2.5rem;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 168, 120, 0.4);
+}
+
+/* ----- Slots / horários ----- */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.5rem;
+}
+
+.slot-grid .btn {
+  border-radius: var(--careplus-radius-sm);
+  padding: 0.6rem;
+}
+
+.slot-grid .btn.active,
+.slot-grid .btn-outline-light.active {
+  background: var(--careplus-teal-light) !important;
+  border-color: var(--careplus-teal-light) !important;
+  color: #fff !important;
+}
+
+.date-strip {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+}
+
+.date-strip .date-item {
+  min-width: 44px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: var(--careplus-radius-sm);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.date-strip .date-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.date-strip .date-item.active {
+  background: var(--careplus-teal-light);
+}
+
+/* ----- Container principal ----- */
+.main-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  min-height: calc(100vh - 56px - var(--nav-height));
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    padding: 1.5rem;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-container {
+    padding: 0.875rem;
+  }
+  .slot-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----- Utilitários ----- */
+.icon-careplus { color: var(--careplus-teal); }
+.bg-careplus-teal { background-color: var(--careplus-teal); }
+
+.bi-icon-sm { font-size: 1.1rem; }
+.bi-icon-md { font-size: 1.5rem; }
+.bi-icon-lg { font-size: 2rem; }
+.bi-icon-xl { font-size: 2.5rem; }
+
+/* ----- Avatar ----- */
+.avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 76, 95, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--careplus-teal-light);
+  font-size: 1.5rem;
+}
+
+.avatar-placeholder.avatar-lg {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+}
+
+.card-careplus .avatar-placeholder {
+  background: rgba(0, 76, 95, 0.12);
+  color: var(--careplus-teal);
+}
+
+/* ----- Calendário (agenda paciente e médico) ----- */
+.careplus-calendar {
+  background: var(--careplus-card);
+  color: var(--careplus-text);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.calendar-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--careplus-text);
+  letter-spacing: -0.02em;
+}
+
+.calendar-nav {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(0, 76, 95, 0.08);
+  color: var(--careplus-teal);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1.1rem;
+}
+
+.calendar-nav:hover {
+  background: rgba(0, 76, 95, 0.15);
+  color: var(--careplus-teal);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.calendar-weekday {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--careplus-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.calendar-day,
+.calendar-day-empty {
+  aspect-ratio: 1;
+  max-width: 44px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--careplus-text);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.calendar-day:hover:not(.calendar-day-empty) {
+  background: rgba(0, 76, 95, 0.08);
+  color: var(--careplus-teal);
+}
+
+.calendar-day:active:not(.calendar-day-empty) {
+  transform: scale(0.94);
+}
+
+.calendar-day-today {
+  background: rgba(0, 76, 95, 0.12);
+  color: var(--careplus-teal);
+  font-weight: 600;
+}
+
+.calendar-day-selected {
+  background: var(--careplus-teal) !important;
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 76, 95, 0.3);
+}
+
+.calendar-day-empty {
+  cursor: default;
+  visibility: hidden;
+  pointer-events: none;
+}

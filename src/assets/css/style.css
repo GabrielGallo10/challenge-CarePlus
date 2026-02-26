@@ -1,0 +1,11 @@
+/**
+ * Care Plus - Entry point de estilos
+ * Todas as páginas linkam apenas este arquivo.
+ * Importa: common, animations, auth, paciente, medico.
+ * Ver src/assets/css/README.md para detalhes.
+ */
+@import url('common.css');
+@import url('animations.css');
+@import url('auth.css');
+@import url('paciente.css');
+@import url('medico.css');

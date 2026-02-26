@@ -1,0 +1,143 @@
+/* ============================================================
+   Care Plus - Páginas de autenticação (login, cadastro, esqueci senha)
+   ============================================================ */
+
+/* Layout centralizado para telas de auth (sem nav inferior) */
+.page-auth {
+  padding-bottom: 2rem;
+}
+
+.page-auth .main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo em branco nas telas de login/cadastro */
+.page-auth .logo-careplus .bi-heart-fill {
+  color: #fff;
+}
+
+.page-auth .logo-careplus .logo-title {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.page-auth .logo-careplus .logo-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Card do formulário de auth */
+.auth-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: scaleIn 0.6s cubic-bezier(0.22, 0.6, 0.35, 1) 0.2s both;
+}
+
+.page-auth .logo-careplus {
+  animation: fadeInUp 0.65s cubic-bezier(0.33, 0.1, 0.2, 1) both;
+}
+
+.auth-card .form-label {
+  color: #374151;
+  font-weight: 500;
+}
+
+.auth-card .form-control {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+}
+
+.auth-card .form-control:focus {
+  border-color: var(--careplus-teal);
+  box-shadow: 0 0 0 3px rgba(0, 76, 95, 0.15);
+}
+
+.auth-card .btn {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+}
+
+/* Botões sociais (Google, Facebook) */
+.btn-social {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-social:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+/* Links da tela de auth */
+.auth-links {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.auth-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.auth-links a:hover {
+  color: #fff;
+}
+
+.auth-card .auth-links a {
+  color: var(--careplus-text-muted);
+}
+
+.auth-card .auth-links a:hover {
+  color: var(--careplus-teal);
+}
+
+/* Toggle Paciente / Médico no cadastro */
+.auth-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-toggle .btn {
+  flex: 1;
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.65rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s;
+}
+
+.auth-toggle .btn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.auth-toggle .btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #fff;
+  color: #fff;
+}
