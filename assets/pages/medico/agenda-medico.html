@@ -16,30 +16,60 @@
   </header>
   <div class="main-container">
     <div id="careplus-calendar" class="mb-4"></div>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Pesquisar paciente ou data">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
+    <div class="search-bar-modern mb-3">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" class="form-control" placeholder="Pesquisar paciente ou data...">
     </div>
-    <p id="msg-data-agenda-medico" class="text-white-50 small mb-2">Consultas do dia selecionado</p>
-    <div class="card card-careplus p-3 mb-2">
-      <strong class="text-dark d-block">Luiz Fernando</strong>
-      <p class="text-muted small mb-0">31 de Outubro, Sexta Feira, 15:00</p>
-      <p class="text-muted small mb-0">Hospital HSJA - Rua Coronel Luiz Ferraz, 397</p>
-      <a href="detalhes-consulta-medico.html" class="btn btn-careplus btn-sm mt-2">Detalhes</a>
+    <h2 class="section-title"><i class="bi bi-calendar-check"></i> Consultas do dia</h2>
+    <p id="msg-data-agenda-medico" class="text-white-50 small mb-3">Consultas para sexta-feira, 31 de outubro</p>
+    <div class="consult-card">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+        <div class="d-flex gap-3 align-items-center">
+          <div class="avatar-placeholder flex-shrink-0"><i class="bi bi-person"></i></div>
+          <div>
+            <div class="consult-title">Luiz Fernando</div>
+            <p class="consult-meta mb-0">31 de Outubro, Sexta-feira, 15:00</p>
+            <p class="consult-meta mb-0">Hospital HSJA</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-end gap-1">
+          <span class="consult-status confirmed"><i class="bi bi-check-circle-fill"></i> Confirmada</span>
+          <a href="detalhes-consulta-medico.html" class="btn btn-careplus btn-sm">Detalhes</a>
+        </div>
+      </div>
     </div>
-    <div class="card card-careplus p-3 mb-2">
-      <strong class="text-dark d-block">Gabriel Gallo</strong>
-      <p class="text-muted small mb-0">31 de Outubro, Sexta Feira, 9:00</p>
-      <p class="text-muted small mb-0">Hospital HSJA - Rua Coronel Luiz Ferraz, 397</p>
-      <a href="detalhes-consulta-medico.html" class="btn btn-careplus btn-sm mt-2">Detalhes</a>
+    <div class="consult-card">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+        <div class="d-flex gap-3 align-items-center">
+          <div class="avatar-placeholder flex-shrink-0"><i class="bi bi-person"></i></div>
+          <div>
+            <div class="consult-title">Gabriel Gallo</div>
+            <p class="consult-meta mb-0">31 de Outubro, Sexta-feira, 9:00</p>
+            <p class="consult-meta mb-0">Hospital HSJA</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-end gap-1">
+          <span class="consult-status confirmed"><i class="bi bi-check-circle-fill"></i> Confirmada</span>
+          <a href="detalhes-consulta-medico.html" class="btn btn-careplus btn-sm">Detalhes</a>
+        </div>
+      </div>
     </div>
-    <hr class="text-white-50 my-3">
-    <p class="text-white-50 small mb-2">Canceladas</p>
-    <div class="card card-careplus p-3 mb-2">
-      <strong class="text-dark d-block">Gabriel Gallo</strong>
-      <p class="text-muted small mb-0">22 de Outubro - Cancelada</p>
-      <p class="text-muted small mb-0">Hospital HSJA - Rua Coronel Luiz Ferraz, 397</p>
-      <a href="detalhes-consulta-cancelada-medico.html" class="btn btn-careplus btn-sm mt-2">Detalhes</a>
+    <div class="agenda-separator"><i class="bi bi-x-circle"></i> Canceladas</div>
+    <div class="consult-card cancelled-card">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+        <div class="d-flex gap-3 align-items-center">
+          <div class="avatar-placeholder flex-shrink-0"><i class="bi bi-person"></i></div>
+          <div>
+            <div class="consult-title">Gabriel Gallo</div>
+            <p class="consult-meta mb-0">22 de Outubro - Cancelada</p>
+            <p class="consult-meta mb-0">Hospital HSJA</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-end gap-1">
+          <span class="consult-status cancelled"><i class="bi bi-x-circle-fill"></i> Cancelada</span>
+          <a href="detalhes-consulta-cancelada-medico.html" class="btn btn-careplus btn-sm">Detalhes</a>
+        </div>
+      </div>
     </div>
   </div>
   <nav class="nav-bottom">
@@ -61,7 +91,6 @@
         msg.textContent = 'Consultas para ' + date.toLocaleDateString('pt-BR', opts);
       }
     });
-    document.getElementById('msg-data-agenda-medico').textContent = 'Consultas para sexta-feira, 31 de outubro';
   </script>
 </body>
 </html>

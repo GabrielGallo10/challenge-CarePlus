@@ -18,43 +18,68 @@
     <span style="width: 24px;"></span>
   </header>
   <div class="main-container">
-    <div class="text-center mb-4">
-      <div class="avatar-placeholder avatar-lg d-inline-flex align-items-center justify-content-center"><i class="bi bi-person"></i></div>
+    <div class="medico-profile-header">
+      <div class="profile-edit-avatar">
+        <div class="avatar-placeholder avatar-lg d-inline-flex align-items-center justify-content-center" style="border: 3px solid rgba(255,255,255,0.3); box-shadow: 0 8px 24px rgba(0,0,0,0.2);"><i class="bi bi-person"></i></div>
+        <span class="profile-edit-btn"><i class="bi bi-camera-fill"></i></span>
+      </div>
+      <div class="profile-name">Dr. Fulano</div>
+      <div class="profile-specialty">Ortopedista</div>
+      <div class="profile-crm">CRM 12345-RJ</div>
     </div>
-    <form>
-      <div class="mb-3">
-        <label class="form-label text-white">Nome</label>
-        <input type="text" class="form-control" placeholder="Fulano" value="Fulano">
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-white">CPF</label>
-        <input type="text" class="form-control" placeholder="000.000.000-00" data-mask="cpf" maxlength="14">
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-white">CRM</label>
-        <input type="text" class="form-control" placeholder="CRM">
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-white">Especialidade</label>
-        <input type="text" class="form-control" placeholder="Especialidade">
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-white">Sexo</label>
-        <div class="d-flex gap-3">
-          <label class="text-white"><input type="radio" name="sexo" checked> Masculino</label>
-          <label class="text-white"><input type="radio" name="sexo"> Feminino</label>
+    <div class="form-card">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" placeholder="Fulano" value="Fulano">
         </div>
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-white">Idade</label>
-        <input type="number" class="form-control" placeholder="Idade">
-      </div>
-      <div class="mb-4">
-        <label class="form-label text-white">Telefone</label>
-        <input type="text" class="form-control" placeholder="+00 (00) 00000-0000" data-mask="telefone">
-      </div>
-      <button type="button" class="btn btn-success-careplus w-100 py-3">SALVAR ALTERAÇÕES</button>
-    </form>
+        <div class="mb-3">
+          <label class="form-label">E-mail</label>
+          <input type="email" class="form-control" placeholder="seu@email.com" value="dr.fulano@careplus.com">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">CPF</label>
+          <input type="text" class="form-control" placeholder="000.000.000-00" data-mask="cpf" maxlength="14">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">CRM</label>
+          <input type="text" class="form-control" placeholder="CRM">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Especialidade</label>
+          <select class="form-select">
+            <option selected>Ortopedista</option>
+            <option>Cardiologista</option>
+            <option>Clínico Geral</option>
+            <option>Dermatologista</option>
+            <option>Oftalmologista</option>
+            <option>Pediatra</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sexo</label>
+          <div class="d-flex gap-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="sexo" id="sexoM" checked>
+              <label class="form-check-label" for="sexoM">Masculino</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="sexo" id="sexoF">
+              <label class="form-check-label" for="sexoF">Feminino</label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Idade</label>
+          <input type="number" class="form-control" placeholder="Idade">
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Telefone</label>
+          <input type="text" class="form-control" placeholder="+00 (00) 00000-0000" data-mask="telefone">
+        </div>
+        <button type="button" class="btn btn-success-careplus w-100 py-3"><i class="bi bi-check-circle me-2"></i>SALVAR ALTERAÇÕES</button>
+      </form>
+    </div>
   </div>
   <nav class="nav-bottom">
     <a href="home-medico.html"><i class="bi bi-house-door-fill nav-icon"></i></a>

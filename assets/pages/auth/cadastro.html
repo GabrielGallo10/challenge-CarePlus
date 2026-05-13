@@ -15,38 +15,125 @@
       <span class="logo-title">Care Plus</span>
       <span class="logo-subtitle">Part of Bupa</span>
     </div>
+
     <div class="auth-card">
-      <div class="auth-toggle">
-        <button type="button" class="btn active" id="btn-tipo-paciente">Paciente</button>
-        <button type="button" class="btn" id="btn-tipo-medico">Médico</button>
+      <h2 class="text-center mb-1" style="font-size: 1.15rem; font-weight: 700; color: #1e293b;">Criar sua conta</h2>
+      <p class="text-center mb-3" style="font-size: 0.85rem; color: #94a3b8;">Preencha seus dados para começar</p>
+
+      <div class="auth-toggle" id="cadastro-toggle">
+        <button type="button" class="btn active" id="btn-tipo-paciente">
+          <i class="bi bi-person-fill"></i> Paciente
+        </button>
+        <button type="button" class="btn" id="btn-tipo-medico">
+          <i class="bi bi-heart-pulse-fill"></i> Médico
+        </button>
       </div>
-      <form class="w-100">
+
+      <form class="w-100" id="form-cadastro">
         <div class="mb-3">
-          <label class="form-label">Nome</label>
-          <input type="text" class="form-control" placeholder="Seu nome">
+          <label class="form-label">Nome completo</label>
+          <input type="text" class="form-control" placeholder="Seu nome completo">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">E-mail</label>
+          <input type="email" class="form-control" placeholder="seu@email.com">
         </div>
         <div class="mb-3">
           <label class="form-label">CPF</label>
-          <input type="text" class="form-control" placeholder="•••.•••.•••-••" data-mask="cpf" maxlength="14">
+          <input type="text" class="form-control" placeholder="000.000.000-00" data-mask="cpf" maxlength="14">
+        </div>
+
+        <div id="campos-medico" style="display: none;">
+          <div class="mb-3">
+            <label class="form-label">CRM</label>
+            <input type="text" class="form-control" placeholder="CRM/UF 000000">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Especialidade</label>
+            <select class="form-select" style="border-radius: 12px; border: 1.5px solid #e5e7eb; padding: 0.8rem 1rem;">
+              <option value="" selected disabled>Selecione sua especialidade</option>
+              <option>Cardiologia</option>
+              <option>Clínico Geral</option>
+              <option>Dermatologia</option>
+              <option>Ginecologia</option>
+              <option>Neurologia</option>
+              <option>Oftalmologia</option>
+              <option>Ortopedia</option>
+              <option>Pediatria</option>
+              <option>Psiquiatria</option>
+              <option>Urologia</option>
+              <option>Outra</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Telefone</label>
+          <input type="tel" class="form-control" placeholder="(00) 00000-0000" data-mask="telefone">
         </div>
         <div class="mb-3">
           <label class="form-label">Senha</label>
-          <input type="password" class="form-control" placeholder="••••••••••">
+          <div class="input-group">
+            <input type="password" class="form-control" placeholder="Mínimo 8 caracteres">
+            <button type="button" class="btn toggle-senha" tabindex="-1">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
         </div>
-        <button type="button" class="btn btn-careplus w-100 py-2 mb-3" onclick="window.location.href='../paciente/home-paciente.html'">Criar conta</button>
+
+        <button type="button" class="btn btn-careplus w-100 py-2 mb-3" id="btn-criar-conta">
+          <i class="bi bi-person-plus me-2"></i>Criar conta
+        </button>
+
+        <div class="auth-separator">
+          <hr><span>ou</span><hr>
+        </div>
+
         <button type="button" class="btn btn-social w-100 py-2 mb-2">
-          <i class="bi bi-google"></i> Entrar com Google
+          <i class="bi bi-google"></i> Cadastrar com Google
         </button>
-        <button type="button" class="btn btn-social w-100 py-2 mb-3">
-          <i class="bi bi-facebook"></i> Entrar com Facebook
+        <button type="button" class="btn btn-social w-100 py-2">
+          <i class="bi bi-facebook"></i> Cadastrar com Facebook
         </button>
-        <div class="auth-links">
-          <a href="login.html">Já tenho uma conta</a>
+
+        <div class="auth-links mt-4">
+          <a href="login.html">Já tem uma conta? <strong>Entrar</strong></a>
         </div>
       </form>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../js/app.js"></script>
+  <script>
+    (function () {
+      var btnPaciente = document.getElementById('btn-tipo-paciente');
+      var btnMedico = document.getElementById('btn-tipo-medico');
+      var camposMedico = document.getElementById('campos-medico');
+      var btnCriar = document.getElementById('btn-criar-conta');
+      var tipoSelecionado = 'paciente';
+
+      btnPaciente.addEventListener('click', function () {
+        tipoSelecionado = 'paciente';
+        btnPaciente.classList.add('active');
+        btnMedico.classList.remove('active');
+        camposMedico.style.display = 'none';
+      });
+
+      btnMedico.addEventListener('click', function () {
+        tipoSelecionado = 'medico';
+        btnMedico.classList.add('active');
+        btnPaciente.classList.remove('active');
+        camposMedico.style.display = 'block';
+      });
+
+      btnCriar.addEventListener('click', function () {
+        if (tipoSelecionado === 'medico') {
+          window.location.href = '../medico/home-medico.html';
+        } else {
+          window.location.href = '../paciente/home-paciente.html';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

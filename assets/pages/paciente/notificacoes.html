@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificações - Care Plus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <a href="home-paciente.html" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i></a>
+    <span class="flex-grow-1 text-center">Notificações</span>
+    <span style="width: 24px;"></span>
+  </header>
+  <div class="main-container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="screen-title mb-0">Notificações</h2>
+      <button type="button" class="btn btn-sm btn-outline-light" style="font-size: 0.75rem;"><i class="bi bi-check2-all me-1"></i>Marcar lidas</button>
+    </div>
+    <h2 class="section-title"><i class="bi bi-bell-fill"></i> Hoje</h2>
+    <div class="card card-careplus p-3 mb-2">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; background: rgba(0, 168, 120, 0.15);">
+          <i class="bi bi-calendar-check" style="color: var(--careplus-green);"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong class="text-dark d-block mb-1">Lembrete de consulta</strong>
+          <p class="text-muted small mb-1">Sua consulta com Dr. Claudio (Ortopedista) é amanhã às 9:00.</p>
+          <span class="text-muted" style="font-size: 0.75rem;">Há 2 horas</span>
+        </div>
+      </div>
+    </div>
+    <div class="card card-careplus p-3 mb-2">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; background: rgba(244, 162, 97, 0.15);">
+          <i class="bi bi-coin" style="color: var(--careplus-orange);"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong class="text-dark d-block mb-1">Pontos recebidos!</strong>
+          <p class="text-muted small mb-1">Você ganhou <strong>+75 pontos</strong> pela consulta concluída com Dr. Roger.</p>
+          <span class="text-muted" style="font-size: 0.75rem;">Há 5 horas</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-title mt-4"><i class="bi bi-clock-history"></i> Ontem</h2>
+    <div class="card card-careplus p-3 mb-2">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; background: rgba(0, 76, 95, 0.12);">
+          <i class="bi bi-chat-dots" style="color: var(--careplus-teal);"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong class="text-dark d-block mb-1">Nova mensagem</strong>
+          <p class="text-muted small mb-1">Dr. Claudio enviou uma mensagem para você.</p>
+          <span class="text-muted" style="font-size: 0.75rem;">Ontem, 8:34</span>
+        </div>
+      </div>
+    </div>
+    <div class="card card-careplus p-3 mb-2">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; background: rgba(0, 168, 120, 0.15);">
+          <i class="bi bi-trophy-fill" style="color: var(--careplus-green);"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong class="text-dark d-block mb-1">Nível 2 alcançado!</strong>
+          <p class="text-muted small mb-1">Parabéns! Você subiu para o nível Explorador. Continue consultando para ganhar mais pontos.</p>
+          <span class="text-muted" style="font-size: 0.75rem;">Ontem, 14:20</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-title mt-4"><i class="bi bi-calendar3"></i> Esta semana</h2>
+    <div class="card card-careplus p-3 mb-2">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; background: rgba(230, 57, 70, 0.12);">
+          <i class="bi bi-x-circle" style="color: var(--careplus-red);"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong class="text-dark d-block mb-1">Consulta cancelada</strong>
+          <p class="text-muted small mb-1">Sua consulta com Dr. Roger de 20/10 foi cancelada. Nenhum ponto foi descontado.</p>
+          <span class="text-muted" style="font-size: 0.75rem;">Seg, 20 Out</span>
+        </div>
+      </div>
+    </div>
+    <div class="card card-careplus p-3 mb-2">
+      <div class="d-flex gap-3 align-items-start">
+        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px; background: rgba(244, 162, 97, 0.15);">
+          <i class="bi bi-gift-fill" style="color: var(--careplus-orange);"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong class="text-dark d-block mb-1">Novo cupom disponível!</strong>
+          <p class="text-muted small mb-1">Consulta com 50% off está disponível na loja de recompensas por 1.000 pontos.</p>
+          <span class="text-muted" style="font-size: 0.75rem;">Dom, 19 Out</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nav-bottom">
+    <a href="home-paciente.html" class="active"><i class="bi bi-house-door-fill nav-icon"></i></a>
+    <a href="perfil-paciente.html"><i class="bi bi-person nav-icon"></i></a>
+    <a href="menu-paciente.html"><i class="bi bi-list nav-icon"></i></a>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/app.js"></script>
+</body>
+</html>

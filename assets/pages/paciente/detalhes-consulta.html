@@ -11,29 +11,49 @@
 <body>
   <header class="app-header">
     <a href="agenda.html" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i></a>
-    <span class="flex-grow-1 text-center">Detalhes</span>
+    <span class="flex-grow-1 text-center">Detalhes da Consulta</span>
     <span style="width: 24px;"></span>
   </header>
   <div class="main-container">
-    <div class="card card-careplus p-3 mb-3">
-      <div class="d-flex gap-3">
+    <div class="card card-careplus p-4 mb-3">
+      <div class="d-flex gap-3 align-items-center mb-3 pb-3 border-bottom">
+        <div class="avatar-placeholder avatar-lg flex-shrink-0"><i class="bi bi-person"></i></div>
         <div>
-          <strong class="text-dark d-block">Ortopedista - Dr. Claudio</strong>
-          <div class="avatar-placeholder avatar-lg my-2"><i class="bi bi-person"></i></div>
-        </div>
-        <div>
-          <strong class="text-dark d-block">Hospital HSIA</strong>
-          <p class="text-muted small mb-0">Rua Coronel Luis Ferraz, 397</p>
-          <p class="text-muted small mb-0">Itaperuna - RJ</p>
-          <p class="text-muted small mb-0">Sexta-feira, 17 de Outubro, às 9:00</p>
+          <strong class="text-dark d-block fs-6">Dr. Claudio</strong>
+          <span class="text-muted small">Ortopedista</span>
+          <span class="badge rounded-pill mt-1" style="background: rgba(0, 168, 120, 0.12); color: var(--careplus-green); font-size: 0.7rem;">Confirmada</span>
         </div>
       </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-hospital icon-careplus"></i>
+        <span class="text-dark small">Hospital HSIA</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-geo-alt icon-careplus"></i>
+        <span class="text-dark small">Rua Coronel Luis Ferraz, 397 - Itaperuna, RJ</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-calendar3 icon-careplus"></i>
+        <span class="text-dark small">Sexta-feira, 17 de Outubro de 2025</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-clock icon-careplus"></i>
+        <span class="text-dark small">9:00</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mt-2 pt-2 border-top">
+        <i class="bi bi-coin" style="color: var(--careplus-orange);"></i>
+        <span class="text-dark small">Você ganhará <strong style="color: var(--careplus-green);">+75 pontos</strong> ao concluir</span>
+      </div>
     </div>
-    <p class="text-white fw-bold mb-1">DETALHES:</p>
+    <h2 class="section-title"><i class="bi bi-file-text"></i> Detalhes</h2>
     <div class="card card-careplus p-3 mb-4">
       <p class="text-muted small mb-0">Dificuldades para andar e muitas dores no tornozelo direito</p>
     </div>
-    <a href="cancelar-consulta.html" class="btn btn-danger-careplus w-100 py-3">CANCELAR CONSULTA</a>
+    <div class="d-flex flex-column gap-2">
+      <a href="mensagens-chat.html" class="btn btn-careplus w-100 py-3"><i class="bi bi-chat-dots me-2"></i>ENVIAR MENSAGEM</a>
+      <a href="ver-localizacao.html" class="btn btn-careplus w-100 py-2"><i class="bi bi-geo-alt me-2"></i>VER LOCALIZAÇÃO</a>
+      <a href="cancelar-consulta.html" class="btn btn-danger-careplus w-100 py-3"><i class="bi bi-x-circle me-2"></i>CANCELAR CONSULTA</a>
+    </div>
   </div>
   <nav class="nav-bottom">
     <a href="home-paciente.html" class="active"><i class="bi bi-house-door-fill nav-icon"></i></a>

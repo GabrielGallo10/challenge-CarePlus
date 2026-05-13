@@ -14,31 +14,63 @@
       <i class="bi bi-heart-fill text-white" style="font-size: 1.5rem;"></i>
       <div><div class="logo-text">Care Plus</div><div class="logo-sub">Part of Bupa</div></div>
     </div>
-    <a href="mensagens-medico.html" class="text-white"><i class="bi bi-bell-fill"></i></a>
+    <a href="notificacoes-medico.html" class="position-relative text-white">
+      <i class="bi bi-bell-fill"></i> <span class="badge-notification">2</span>
+    </a>
   </header>
   <div class="main-container">
     <div class="home-welcome mb-4">
       <h1 class="screen-title">Olá, Dr. Ciclano</h1>
-      <p class="screen-subtitle mb-0">Você possui 2 consultas marcadas. Verifique sua agenda.</p>
+      <p class="screen-subtitle mb-0">Você possui 2 consultas marcadas hoje</p>
     </div>
+    <div class="medico-next-appointment">
+      <div class="next-label"><i class="bi bi-clock-fill"></i> Próxima consulta</div>
+      <div class="next-patient">Gabriel Gallo</div>
+      <div class="next-info"><i class="bi bi-calendar3"></i> Sex, 31 Out · 9:00</div>
+      <div class="next-info"><i class="bi bi-hospital"></i> Hospital HSJA</div>
+      <a href="detalhes-consulta-medico.html" class="btn btn-careplus btn-sm mt-2"><i class="bi bi-eye me-1"></i>Ver detalhes</a>
+    </div>
+    <div class="medico-stats">
+      <div class="medico-stat-card">
+        <div class="medico-stat-icon blue"><i class="bi bi-calendar-check"></i></div>
+        <div class="medico-stat-value">2</div>
+        <div class="medico-stat-label">Consultas hoje</div>
+      </div>
+      <div class="medico-stat-card">
+        <div class="medico-stat-icon green"><i class="bi bi-people"></i></div>
+        <div class="medico-stat-value">5</div>
+        <div class="medico-stat-label">Pacientes</div>
+      </div>
+      <div class="medico-stat-card">
+        <div class="medico-stat-icon orange"><i class="bi bi-clock-history"></i></div>
+        <div class="medico-stat-value">18</div>
+        <div class="medico-stat-label">Consultas no mês</div>
+      </div>
+      <div class="medico-stat-card">
+        <div class="medico-stat-icon purple"><i class="bi bi-chat-dots"></i></div>
+        <div class="medico-stat-value">3</div>
+        <div class="medico-stat-label">Mensagens</div>
+      </div>
+    </div>
+    <h2 class="section-title"><i class="bi bi-lightning-fill"></i> Acesso rápido</h2>
     <div class="d-flex flex-column gap-2">
       <a href="agenda-medico.html" class="app-card text-decoration-none">
-        <span class="app-card-icon"><i class="bi bi-calendar3"></i></span>
+        <span class="app-card-icon blue"><i class="bi bi-calendar3"></i></span>
         <span class="app-card-label">Agenda</span>
         <i class="bi bi-chevron-right app-card-arrow"></i>
       </a>
       <a href="historico-medico.html" class="app-card text-decoration-none">
-        <span class="app-card-icon"><i class="bi bi-clock-history"></i></span>
+        <span class="app-card-icon purple"><i class="bi bi-clock-history"></i></span>
         <span class="app-card-label">Histórico</span>
         <i class="bi bi-chevron-right app-card-arrow"></i>
       </a>
       <a href="mensagens-medico.html" class="app-card text-decoration-none">
-        <span class="app-card-icon"><i class="bi bi-chat-dots"></i></span>
+        <span class="app-card-icon green"><i class="bi bi-chat-dots"></i></span>
         <span class="app-card-label">Mensagens</span>
         <i class="bi bi-chevron-right app-card-arrow"></i>
       </a>
       <a href="clientes-medico.html" class="app-card text-decoration-none">
-        <span class="app-card-icon"><i class="bi bi-people"></i></span>
+        <span class="app-card-icon orange"><i class="bi bi-people"></i></span>
         <span class="app-card-label">Clientes</span>
         <i class="bi bi-chevron-right app-card-arrow"></i>
       </a>

@@ -299,6 +299,32 @@ a.card-careplus:hover {
   font-size: 0.9rem;
 }
 
+.consult-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.consult-status.confirmed {
+  background: rgba(0, 168, 120, 0.12);
+  color: var(--careplus-green);
+}
+
+.consult-status.cancelled {
+  background: rgba(230, 57, 70, 0.1);
+  color: var(--careplus-red);
+}
+
+.consult-status.pending {
+  background: rgba(244, 162, 97, 0.12);
+  color: var(--careplus-orange);
+}
+
 /* ----- Form card (formulário dentro de card em telas escuras) ----- */
 .form-card {
   background: var(--careplus-card);
@@ -307,7 +333,8 @@ a.card-careplus:hover {
   box-shadow: var(--careplus-shadow);
 }
 
-.form-card .form-label {
+.form-card .form-label,
+.form-card .form-check-label {
   color: var(--careplus-text);
   font-weight: 500;
 }
