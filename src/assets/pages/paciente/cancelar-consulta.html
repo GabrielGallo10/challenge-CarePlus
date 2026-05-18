@@ -15,12 +15,47 @@
     <span style="width: 24px;"></span>
   </header>
   <div class="main-container">
-    <p class="text-white fw-bold mb-1">MOTIVO:</p>
-    <div class="card card-careplus p-3 mb-3">
-      <p class="text-muted small mb-0">"Está marcando muita chuva para amanhã, não vou conseguir ir."</p>
+    <div class="card card-careplus p-4 mb-3">
+      <div class="d-flex gap-3 align-items-center mb-3 pb-3 border-bottom">
+        <div class="avatar-placeholder flex-shrink-0"><i class="bi bi-person"></i></div>
+        <div>
+          <strong class="text-dark d-block">Dr. Claudio</strong>
+          <span class="text-muted small">Ortopedista</span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-calendar3 icon-careplus"></i>
+        <span class="text-dark small">Sexta-feira, 17 de Outubro de 2025</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-clock icon-careplus"></i>
+        <span class="text-dark small">9:00</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-geo-alt icon-careplus"></i>
+        <span class="text-dark small">Hospital HSIA - Itaperuna, RJ</span>
+      </div>
     </div>
-    <p class="text-white small mb-4">Consultas canceladas com no mínimo 24 horas de antecedência ou com motivo esclarecido não sofrerá perda de pontos, caso contrário o paciente perderá <span class="text-warning fw-bold">50 pontos</span> de sua Carteira Digital.</p>
-    <a href="cancelado-sucesso.html" class="btn btn-danger-careplus w-100 py-3">CONFIRMAR CANCELAMENTO</a>
+    <h2 class="section-title"><i class="bi bi-pencil-square"></i> Motivo do cancelamento</h2>
+    <div class="card card-careplus p-3 mb-3">
+      <textarea class="form-control border-0 p-0" rows="3" placeholder="Informe o motivo do cancelamento...">Está marcando muita chuva para amanhã, não vou conseguir ir.</textarea>
+    </div>
+    <div class="card card-careplus p-3 mb-3">
+      <div class="d-flex align-items-start gap-2">
+        <i class="bi bi-exclamation-triangle" style="color: var(--careplus-orange); font-size: 1.1rem; margin-top: 2px;"></i>
+        <p class="text-muted small mb-0">Cancelamentos com no mínimo <strong>24 horas de antecedência</strong> ou com motivo esclarecido não sofrerão perda de pontos. Caso contrário, o paciente perderá <strong class="text-warning">50 pontos</strong> de sua Carteira Digital.</p>
+      </div>
+    </div>
+
+    <div class="card card-careplus p-3 mb-4" style="border-left: 4px solid var(--careplus-green);">
+      <p class="text-dark small fw-bold mb-1"><i class="bi bi-lightbulb me-1" style="color: var(--careplus-green);"></i> Prefere reagendar?</p>
+      <p class="text-muted small mb-2">Reagendar é mais rápido e você não perde seus pontos. Escolha uma nova data e horário em segundos.</p>
+      <a href="reagendar-consulta.html" class="btn w-100 py-2 fw-bold" style="background: rgba(0,168,120,0.12); color: var(--careplus-green); border: 1.5px solid var(--careplus-green); border-radius: 14px; font-size: 0.85rem;">
+        <i class="bi bi-calendar2-check me-2"></i>REAGENDAR AO INVÉS DE CANCELAR
+      </a>
+    </div>
+
+    <a href="cancelado-sucesso.html" class="btn btn-danger-careplus w-100 py-3"><i class="bi bi-x-circle me-2"></i>CONFIRMAR CANCELAMENTO</a>
   </div>
   <nav class="nav-bottom">
     <a href="home-paciente.html" class="active"><i class="bi bi-house-door-fill nav-icon"></i></a>

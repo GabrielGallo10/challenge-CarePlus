@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta reagendada - Care Plus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <a href="agenda.html" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i></a>
+    <span class="flex-grow-1 text-center">Reagendamento</span>
+    <span style="width: 24px;"></span>
+  </header>
+  <div class="main-container text-center py-4">
+    <div class="success-check"><i class="bi bi-calendar2-check"></i></div>
+    <h2 class="h5 text-white mb-2">Consulta reagendada!</h2>
+    <p class="text-white-50 small mb-4">Seu agendamento foi atualizado com sucesso. Você receberá um novo lembrete na data marcada.</p>
+
+    <div class="card card-careplus p-4 mb-3">
+      <p class="text-muted small fw-bold mb-2 text-start"><i class="bi bi-x-circle me-1" style="color: var(--careplus-red);"></i> Data anterior</p>
+      <div class="d-flex align-items-center gap-2 mb-3 pb-3 border-bottom">
+        <i class="bi bi-calendar3" style="color: var(--careplus-red); opacity: 0.7;"></i>
+        <span class="text-muted small" style="text-decoration: line-through;">Sexta-feira, 17 de Outubro, às 9:00</span>
+      </div>
+      <p class="text-muted small fw-bold mb-2 text-start"><i class="bi bi-check-circle me-1" style="color: var(--careplus-green);"></i> Nova data</p>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-person icon-careplus"></i>
+        <span class="text-dark small fw-bold">Ortopedista - Dr. Claudio</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-calendar3 icon-careplus"></i>
+        <span class="text-dark small">Quarta-feira, 22 de Outubro, às 9:30</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <i class="bi bi-geo-alt icon-careplus"></i>
+        <span class="text-dark small">Hospital HSIA - Itaperuna, RJ</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 pt-2 border-top">
+        <i class="bi bi-coin" style="color: var(--careplus-orange);"></i>
+        <span class="text-dark small">Você ganhará <strong style="color: var(--careplus-green);">+75 pontos</strong> ao comparecer</span>
+      </div>
+    </div>
+
+    <div class="card card-careplus p-3 mb-4" style="border-left: 4px solid var(--careplus-green);">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-bell-fill" style="color: var(--careplus-green);"></i>
+        <span class="text-dark small">Lembretes automáticos serão enviados <strong>48h e 2h</strong> antes da nova consulta.</span>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column gap-2">
+      <a href="agenda.html" class="btn btn-success-careplus py-3"><i class="bi bi-calendar3 me-2"></i>VER AGENDA</a>
+      <a href="home-paciente.html" class="btn btn-careplus py-3"><i class="bi bi-house-door me-2"></i>PÁGINA INICIAL</a>
+    </div>
+  </div>
+  <nav class="nav-bottom">
+    <a href="home-paciente.html" class="active"><i class="bi bi-house-door-fill nav-icon"></i></a>
+    <a href="perfil-paciente.html"><i class="bi bi-person nav-icon"></i></a>
+    <a href="menu-paciente.html"><i class="bi bi-list nav-icon"></i></a>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/app.js"></script>
+</body>
+</html>

@@ -11,16 +11,31 @@
 <body>
   <header class="app-header">
     <a href="agenda-medico.html" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i></a>
-    <span class="flex-grow-1 text-center">Cancelar Consulta</span>
+    <span class="flex-grow-1 text-center">Cancelamento</span>
     <span style="width: 24px;"></span>
   </header>
-  <div class="main-container text-center py-5">
-    <div class="success-check"><i class="bi bi-check-lg"></i></div>
-    <h2 class="h5 text-white mb-4">Consulta cancelada com sucesso!</h2>
+  <div class="main-container text-center py-4">
+    <div class="success-check" style="background: var(--careplus-red); box-shadow: 0 8px 24px rgba(230, 57, 70, 0.4);"><i class="bi bi-x-lg"></i></div>
+    <h2 class="h5 text-white mb-2">Consulta cancelada</h2>
+    <p class="text-white-50 small mb-4">O paciente será notificado sobre o cancelamento</p>
+    <div class="card card-careplus p-4 mb-4">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-person icon-careplus"></i>
+        <span class="text-dark small fw-bold">Gabriel Gallo</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-calendar3 icon-careplus"></i>
+        <span class="text-dark small">22 de Outubro de 2025</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-hospital icon-careplus"></i>
+        <span class="text-dark small">Hospital HSJA</span>
+      </div>
+    </div>
     <div class="d-flex flex-column gap-2">
-      <a href="home-medico.html" class="btn btn-success-careplus py-3">PÁGINA INICIAL</a>
-      <a href="agenda-medico.html" class="btn btn-success-careplus py-3">AGENDA</a>
-      <a href="historico-medico.html" class="btn btn-success-careplus py-3">HISTÓRICO</a>
+      <a href="agenda-medico.html" class="btn btn-success-careplus py-3"><i class="bi bi-calendar3 me-2"></i>VOLTAR PARA AGENDA</a>
+      <a href="historico-medico.html" class="btn btn-careplus py-3"><i class="bi bi-clock-history me-2"></i>HISTÓRICO</a>
+      <a href="home-medico.html" class="btn btn-careplus py-3"><i class="bi bi-house-door me-2"></i>PÁGINA INICIAL</a>
     </div>
   </div>
   <nav class="nav-bottom">

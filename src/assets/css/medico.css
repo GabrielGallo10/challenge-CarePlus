@@ -1,5 +1,427 @@
 /* ============================================================
    Care Plus - Fluxo do médico (home, agenda, clientes, etc.)
+   Estilos específicos para as páginas do médico.
    ============================================================ */
 
-/* Home e listas usam .home-welcome e .app-card de common/paciente */
+/* ----- Home Médico: stats rápidas ----- */
+.medico-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.medico-stat-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.15rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.medico-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.medico-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin: 0 auto 0.6rem;
+}
+
+.medico-stat-icon.blue {
+  background: rgba(0, 76, 95, 0.25);
+  color: #4dd0e1;
+}
+
+.medico-stat-icon.green {
+  background: rgba(0, 168, 120, 0.25);
+  color: #00d4aa;
+}
+
+.medico-stat-icon.orange {
+  background: rgba(244, 162, 97, 0.25);
+  color: var(--careplus-orange);
+}
+
+.medico-stat-icon.purple {
+  background: rgba(156, 39, 176, 0.2);
+  color: #ce93d8;
+}
+
+.medico-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.medico-stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+/* ----- Consulta card médico (com status badge) ----- */
+.consult-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.consult-status.confirmed {
+  background: rgba(0, 168, 120, 0.15);
+  color: var(--careplus-green);
+}
+
+.consult-status.cancelled {
+  background: rgba(230, 57, 70, 0.12);
+  color: var(--careplus-red);
+}
+
+.consult-status.pending {
+  background: rgba(244, 162, 97, 0.15);
+  color: var(--careplus-orange);
+}
+
+/* ----- Cliente card (lista de clientes) ----- */
+.cliente-card {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--careplus-shadow);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.cliente-card:hover {
+  transform: translateX(3px);
+  box-shadow: var(--careplus-shadow-hover);
+}
+
+/* ----- Detalhes cliente: info sections ----- */
+.client-info-section {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: var(--careplus-shadow);
+}
+
+.client-info-section h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--careplus-text);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.client-info-section h2 i {
+  color: var(--careplus-teal);
+}
+
+/* ----- Histórico item do médico ----- */
+.medico-history-item {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--careplus-teal);
+  transition: transform 0.15s;
+}
+
+.medico-history-item:hover {
+  transform: translateX(3px);
+}
+
+/* ----- Cancelada card (consultas canceladas) ----- */
+.cancelled-card {
+  border-left-color: var(--careplus-red) !important;
+  opacity: 0.85;
+}
+
+.cancelled-card:hover {
+  opacity: 1;
+}
+
+/* ----- Profile médico badges ----- */
+.medico-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 76, 95, 0.1);
+  color: var(--careplus-teal);
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ----- Agenda separator ----- */
+.agenda-separator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.agenda-separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ----- Home: próxima consulta do médico ----- */
+.medico-next-appointment {
+  background: var(--careplus-card);
+  border-radius: 20px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--careplus-shadow);
+  border-left: 4px solid var(--careplus-teal);
+}
+
+.medico-next-appointment .next-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--careplus-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.medico-next-appointment .next-patient {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--careplus-text);
+  margin-bottom: 0.15rem;
+}
+
+.medico-next-appointment .next-info {
+  font-size: 0.8rem;
+  color: var(--careplus-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ----- Menu: doctor info header ----- */
+.menu-doctor-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(0, 76, 95, 0.2) 0%, rgba(0, 168, 120, 0.15) 100%);
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-doctor-header .doctor-info {
+  flex: 1;
+}
+
+.menu-doctor-header .doctor-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.menu-doctor-header .doctor-specialty {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.menu-doctor-header .doctor-specialty i {
+  color: var(--careplus-green);
+}
+
+/* ----- Perfil médico: enhanced avatar ----- */
+.medico-profile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.medico-profile-header .profile-edit-avatar {
+  position: relative;
+  display: inline-block;
+}
+
+.medico-profile-header .profile-edit-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--careplus-teal);
+  color: #fff;
+  border: 2px solid var(--careplus-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.medico-profile-header .profile-edit-btn:hover {
+  background: var(--careplus-teal-light);
+}
+
+.medico-profile-header .profile-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.75rem;
+}
+
+.medico-profile-header .profile-specialty {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.medico-profile-header .profile-crm {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.15rem;
+}
+
+/* ----- Quick access colored icons ----- */
+.app-card .app-card-icon.blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.app-card .app-card-icon.green {
+  background: rgba(0, 168, 120, 0.12);
+  color: var(--careplus-green);
+}
+
+.app-card .app-card-icon.purple {
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+}
+
+.app-card .app-card-icon.orange {
+  background: rgba(244, 162, 97, 0.12);
+  color: var(--careplus-orange);
+}
+
+/* ----- Client card enhanced ----- */
+.client-card-enhanced {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1.15rem;
+  margin-bottom: 0.6rem;
+  box-shadow: var(--careplus-shadow);
+  border-left: 4px solid var(--careplus-teal);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.client-card-enhanced:hover {
+  transform: translateX(3px);
+  box-shadow: var(--careplus-shadow-hover);
+}
+
+.client-total-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 76, 95, 0.08);
+  color: var(--careplus-teal);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ----- Detalhes cliente: contact cards ----- */
+.client-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+}
+
+.client-contact-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.client-contact-item .contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.client-contact-item .contact-icon.phone {
+  background: rgba(0, 76, 95, 0.1);
+  color: var(--careplus-teal);
+}
+
+.client-contact-item .contact-icon.email {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+/* ----- Detalhes consulta: action buttons improved ----- */
+.action-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action-btn-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: var(--careplus-radius-sm);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.action-btn-group .btn:hover {
+  transform: translateY(-1px);
+}

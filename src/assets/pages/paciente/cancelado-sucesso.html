@@ -11,17 +11,31 @@
 <body>
   <header class="app-header">
     <a href="agenda.html" class="text-white text-decoration-none"><i class="bi bi-arrow-left"></i></a>
-    <span class="flex-grow-1 text-center">Cancelar Consulta</span>
+    <span class="flex-grow-1 text-center">Cancelamento</span>
     <span style="width: 24px;"></span>
   </header>
-  <div class="main-container text-center py-5">
-    <div class="success-check"><i class="bi bi-check-lg"></i></div>
-    <h2 class="h5 text-white mb-4">Consulta cancelada com sucesso!</h2>
+  <div class="main-container text-center py-4">
+    <div class="success-check" style="background: var(--careplus-red); box-shadow: 0 8px 24px rgba(230, 57, 70, 0.4);"><i class="bi bi-x-lg"></i></div>
+    <h2 class="h5 text-white mb-2">Consulta cancelada</h2>
+    <p class="text-white-50 small mb-4">Sua consulta foi cancelada com sucesso</p>
+    <div class="card card-careplus p-4 mb-4">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-person icon-careplus"></i>
+        <span class="text-dark small fw-bold">Ortopedista - Dr. Claudio</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <i class="bi bi-calendar3 icon-careplus"></i>
+        <span class="text-dark small">Sexta-feira, 17 de Outubro, às 9:00</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 pt-2 border-top">
+        <i class="bi bi-coin" style="color: var(--careplus-green);"></i>
+        <span class="text-dark small"><strong style="color: var(--careplus-green);">Nenhum ponto descontado</strong></span>
+      </div>
+    </div>
     <div class="d-flex flex-column gap-2">
-      <a href="home-paciente.html" class="btn btn-success-careplus py-3">PÁGINA INICIAL</a>
-      <a href="agenda.html" class="btn btn-success-careplus py-3">AGENDA</a>
-      <a href="historico-paciente.html" class="btn btn-success-careplus py-3">HISTÓRICO</a>
-      <a href="carteira-digital.html" class="btn btn-success-careplus py-3">CARTEIRA DIGITAL</a>
+      <a href="agenda.html" class="btn btn-success-careplus py-3"><i class="bi bi-calendar3 me-2"></i>VOLTAR PARA AGENDA</a>
+      <a href="carteira-digital.html" class="btn btn-careplus py-3"><i class="bi bi-wallet2 me-2"></i>CARTEIRA DIGITAL</a>
+      <a href="home-paciente.html" class="btn btn-careplus py-3"><i class="bi bi-house-door me-2"></i>PÁGINA INICIAL</a>
     </div>
   </div>
   <nav class="nav-bottom">

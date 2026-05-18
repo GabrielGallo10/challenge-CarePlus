@@ -532,3 +532,312 @@
   color: var(--careplus-teal);
   font-weight: 600;
 }
+
+/* ----- Feature card cores por categoria ----- */
+.feature-card .feature-icon.blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.feature-card .feature-icon.green {
+  background: rgba(0, 168, 120, 0.12);
+  color: var(--careplus-green);
+}
+
+.feature-card .feature-icon.purple {
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+}
+
+.feature-card .feature-icon.orange {
+  background: rgba(244, 162, 97, 0.12);
+  color: var(--careplus-orange);
+}
+
+.feature-card .feature-icon.red {
+  background: rgba(230, 57, 70, 0.1);
+  color: var(--careplus-red);
+}
+
+.feature-card .feature-icon.teal {
+  background: rgba(0, 76, 95, 0.1);
+  color: var(--careplus-teal);
+}
+
+/* ----- Próxima consulta card (home) ----- */
+.next-appointment {
+  background: var(--careplus-card);
+  border-radius: 20px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--careplus-shadow);
+  border-left: 4px solid var(--careplus-green);
+}
+
+.next-appointment .next-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--careplus-green);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.next-appointment .next-doctor {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--careplus-text);
+  margin-bottom: 0.15rem;
+}
+
+.next-appointment .next-info {
+  font-size: 0.8rem;
+  color: var(--careplus-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ----- Menu: user info header ----- */
+.menu-user-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(0, 168, 120, 0.15) 0%, rgba(0, 76, 95, 0.25) 100%);
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-user-header .menu-user-info {
+  flex: 1;
+}
+
+.menu-user-header .menu-user-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.menu-user-header .menu-user-level {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.menu-user-header .menu-user-level i {
+  color: var(--careplus-orange);
+}
+
+/* ----- Perfil: enhanced avatar ----- */
+.profile-header .profile-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.75rem;
+}
+
+.profile-header .profile-email {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-header .profile-edit-avatar {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-header .profile-edit-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--careplus-teal);
+  color: #fff;
+  border: 2px solid var(--careplus-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profile-header .profile-edit-btn:hover {
+  background: var(--careplus-teal-light);
+}
+
+/* ----- Consult card enhanced ----- */
+.consult-card .consult-doctor-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.consult-card .consult-specialty {
+  font-size: 0.75rem;
+  color: var(--careplus-teal);
+  font-weight: 600;
+  background: rgba(0, 76, 95, 0.08);
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+/* ----- Search bar modern ----- */
+.search-bar-modern {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.search-bar-modern .form-control {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  color: #fff;
+  padding: 0.8rem 1rem 0.8rem 2.75rem;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.search-bar-modern .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-bar-modern .form-control:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.search-bar-modern .search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+/* ----- Reward card enhanced ----- */
+.wallet-reward-card .reward-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(0, 76, 95, 0.08);
+  color: var(--careplus-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 0.65rem;
+}
+
+.wallet-reward-card .reward-discount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--careplus-teal);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+/* ----- Ajuda FAQ enhanced ----- */
+.faq-card {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  overflow: hidden;
+  box-shadow: var(--careplus-shadow);
+  margin-bottom: 1rem;
+}
+
+.faq-card .accordion-button {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--careplus-text);
+  padding: 1rem 1.25rem;
+  border: none;
+  box-shadow: none !important;
+}
+
+.faq-card .accordion-button:not(.collapsed) {
+  background: rgba(0, 76, 95, 0.04);
+  color: var(--careplus-teal);
+}
+
+.faq-card .accordion-button::after {
+  filter: none;
+}
+
+.faq-card .accordion-body {
+  padding: 0 1.25rem 1rem;
+  font-size: 0.85rem;
+  color: var(--careplus-text-muted);
+  line-height: 1.6;
+}
+
+.faq-card .accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.faq-card .accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* ----- Contact card ----- */
+.contact-card {
+  background: var(--careplus-card);
+  border-radius: var(--careplus-radius);
+  padding: 1.25rem;
+  box-shadow: var(--careplus-shadow);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+}
+
+.contact-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.contact-item .contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-item .contact-icon.phone {
+  background: rgba(0, 76, 95, 0.1);
+  color: var(--careplus-teal);
+}
+
+.contact-item .contact-icon.whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  color: #25d366;
+}
+
+.contact-item .contact-icon.email {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
